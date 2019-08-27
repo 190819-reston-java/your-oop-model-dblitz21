@@ -25,12 +25,12 @@ public class Motorcycle extends Vehicle implements Serializable, Trick {
 	}
 	
 	public void checkTires() {
-		System.out.println("Four Tires checked out normally!");
+		System.out.println("Two Tires checked out normally!");
 	}
 	
 	@Override
 	public void drive(){
-		System.out.println(this.getName() + " is zipping along at " + this.getSpeed() + "mph");
+		System.out.println(this.getName() + " is zipping along at " + this.getSpeed() + "mph.");
 	}
 
 }
