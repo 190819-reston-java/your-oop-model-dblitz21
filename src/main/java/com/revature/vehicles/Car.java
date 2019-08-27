@@ -22,7 +22,7 @@ public class Car extends Vehicle {
 	}
 	
 	public static void checkTraffic() {
-		System.out.println("There are " + trafficlevel + " on the road.");
+		System.out.println("There are " + trafficlevel + " car(s) on the road.");
 	}
 
 }
