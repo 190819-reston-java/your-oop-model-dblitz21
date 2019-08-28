@@ -14,7 +14,16 @@ public class Driver {
 		c.jump();
 		c.checkTires();
 		a.checkTraffic();
-
+		Motorcycle d = new Motorcycle("Chopper", "gray", 75);
+		Motorcycle e = new Motorcycle("Dirt Bike", "red", 95);
+		
+		//collection methods
+		Gang ravens = new Gang();
+		ravens.addGangMember(c);
+		ravens.addGangMember(d);
+		ravens.addGangMember(e);
+		
+		ravens.ownTheHighway();
 	}
 	
 

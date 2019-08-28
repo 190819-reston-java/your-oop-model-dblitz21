@@ -32,7 +32,7 @@ public class VehicleCollectionDriver {
 		Set<Car> carSet = new HashSet<Car>(carList);
 		carSet.add(new Car("Chevy Prism", "maroon", 60));
 		
-		System.out.println("\nPrinting out an Hashset of Cars taken from the car list");
+		System.out.println("\nPrinting out a Hashset of Cars taken from the car list");
 		System.out.println(carSet);
 		
 		
