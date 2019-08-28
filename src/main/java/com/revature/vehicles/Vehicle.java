@@ -54,6 +54,11 @@ public abstract class Vehicle {
 		System.out.println(name + " looks in good shape");
 	}
 	
+	@Override
+	public String toString() {
+		return this.name + " " + this.color + " " + this.speed;
+	}
+	
 	public abstract void checkTires();
 
 }

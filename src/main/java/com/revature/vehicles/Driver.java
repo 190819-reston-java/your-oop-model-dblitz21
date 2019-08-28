@@ -12,7 +12,7 @@ public class Driver {
 		c.drive();
 		System.out.println(a.getColor());
 		c.jump();
-		a.checkTires();
+		c.checkTires();
 		a.checkTraffic();
 
 	}
