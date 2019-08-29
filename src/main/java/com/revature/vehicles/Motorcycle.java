@@ -2,7 +2,7 @@ package com.revature.vehicles;
 
 import java.io.Serializable;
 
-public class Motorcycle extends Vehicle implements Serializable, Trick {
+public class Motorcycle extends Vehicle implements Serializable, Trick, Comparable<Motorcycle> {
 
 	public Motorcycle() {
 		// TODO Auto-generated constructor stub
@@ -33,4 +33,8 @@ public class Motorcycle extends Vehicle implements Serializable, Trick {
 		System.out.println(this.getName() + " is zipping along at " + this.getSpeed() + "mph.");
 	}
 
+	public int compareTo(Motorcycle moto) {
+		
+		return -1 * (this.getSpeed() - moto.getSpeed());
+	}
 }

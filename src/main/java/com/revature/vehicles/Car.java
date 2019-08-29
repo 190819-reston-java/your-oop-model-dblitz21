@@ -1,6 +1,6 @@
 package com.revature.vehicles;
 
-public class Car extends Vehicle {
+public class Car extends Vehicle implements Comparable<Car> {
 	static int trafficlevel = 0;
 	public Car() {
 		
@@ -23,6 +23,11 @@ public class Car extends Vehicle {
 	
 	public static void checkTraffic() {
 		System.out.println("There are " + trafficlevel + " car(s) on the road.");
+	}
+	
+	public int compareTo(Car auto) {
+		
+		return this.getSpeed() - auto.getSpeed();
 	}
 
 }

@@ -2,6 +2,8 @@ package com.revature.vehicles;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class Gang extends ArrayList<Motorcycle> {
 	
@@ -23,8 +25,12 @@ public class Gang extends ArrayList<Motorcycle> {
 	}
 	
 	public void ownTheHighway(){
-		for (Motorcycle a : this.motorList) {
-			System.out.println(a.getName() + " revs up their engine and races along the highway at " 
+		//motorList.sort();
+		
+		SortedSet<Motorcycle> sortedCarSet = new TreeSet<Motorcycle>(motorList);
+		
+		for (Motorcycle a : sortedCarSet) {
+			System.out.println(a.getName() + " revs up its engine and races along the highway at " 
 			+ a.getSpeed() + "mph");
 		}
 	}

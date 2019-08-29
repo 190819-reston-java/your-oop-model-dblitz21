@@ -6,6 +6,7 @@ public class Driver {
 		// TODO Auto-generated method stub
 		Car a = new Car("Ferari", "Red", 65);
 		Car b = new Car("Chevrolet");
+		Car cadillac = new Car("Cadillac", "Green", 120);
 		Motorcycle c = new Motorcycle("Chopper", "black", 85);
 		a.checkTires();
 		a.drive();
@@ -14,7 +15,7 @@ public class Driver {
 		c.jump();
 		c.checkTires();
 		a.checkTraffic();
-		Motorcycle d = new Motorcycle("Chopper", "gray", 75);
+		Motorcycle d = new Motorcycle("Harley", "gray", 75);
 		Motorcycle e = new Motorcycle("Dirt Bike", "red", 95);
 		
 		//collection methods
@@ -24,6 +25,19 @@ public class Driver {
 		ravens.addGangMember(e);
 		
 		ravens.ownTheHighway();
+		
+		ravens.expelGangMember(d);
+		
+		ravens.ownTheHighway();
+//		DragRace race = new DragRace();
+//		race.enterRace(a);
+//		race.enterRace(b);
+//		race.enterRace(cadillac);
+//		
+//		race.startRace();
+		
+		
+		
 	}
 	
 
