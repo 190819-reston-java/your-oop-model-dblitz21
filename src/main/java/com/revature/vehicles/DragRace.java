@@ -11,9 +11,14 @@ import java.util.TreeSet;
 public class DragRace {
 	
 	private List<Car> autoList = new ArrayList<Car>();
+	private String winner = "";
 	
 	public DragRace() {
 		
+	}
+	
+	public String getWinner() {
+		return winner;
 	}
 	
 	public void enterRace(Car auto) {
@@ -46,6 +51,7 @@ public class DragRace {
 		String result = "The " + sortedCarSet.first().getName() + " wins and the " + sortedCarSet.last().getName() 
 				+ " is left trailing behind!!";
 		System.out.println(result);
+		this.winner = sortedCarSet.first().getName();
 	}
 
 }

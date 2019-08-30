@@ -1,8 +1,11 @@
 package com.revature.vehicles;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 public class Driver {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException, IOException {
 		
 		Car ferari = new Car("Ferari", "Red", 95);
 		Car delorean = new Car("Delorean", "Silver", 88);
@@ -42,7 +45,8 @@ public class Driver {
 		
 		race.startRace();
 		
-		
+		Records r = new Records();
+		r.recordResults("\n" +  race.getWinner());
 		
 	}
 	
