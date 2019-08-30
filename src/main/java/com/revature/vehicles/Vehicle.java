@@ -10,6 +10,9 @@ public abstract class Vehicle {
 	}
 	
 	public Vehicle(String name, String color, int speed) {
+		if(speed < 0) {
+			throw new NegativeSpeedException();
+		}
 		this.name = name;
 		this.speed = speed;
 		this.color = color;
@@ -27,6 +30,9 @@ public abstract class Vehicle {
 	}
 
 	public void setSpeed(int speed) {
+		if(speed < 0) {
+			throw new NegativeSpeedException();
+		}
 		this.speed = speed;
 	}
 

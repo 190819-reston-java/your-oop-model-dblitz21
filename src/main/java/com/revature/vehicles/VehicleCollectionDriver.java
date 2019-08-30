@@ -5,7 +5,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-
+/**
+ * 
+ * @author blitz
+ * 
+ * Class used to test collection methods originally. Wound up not being a part of the main project.
+ * See Gang, DragRace and the Driver class for actual collection usages. 
+ *
+ */
 
 public class VehicleCollectionDriver {
 

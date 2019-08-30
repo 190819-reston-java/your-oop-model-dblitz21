@@ -7,7 +7,7 @@ public class Driver {
 		Car a = new Car("Ferari", "Red", 65);
 		Car b = new Car("Chevrolet");
 		Car cadillac = new Car("Cadillac", "Green", 120);
-		Motorcycle c = new Motorcycle("Chopper", "black", 85);
+		Motorcycle c = new Motorcycle("Chopper", "black", -5);
 		a.checkTires();
 		a.drive();
 		c.drive();
@@ -25,10 +25,9 @@ public class Driver {
 		ravens.addGangMember(e);
 		
 		ravens.ownTheHighway();
-		
 		ravens.expelGangMember(d);
-		
 		ravens.ownTheHighway();
+		
 //		DragRace race = new DragRace();
 //		race.enterRace(a);
 //		race.enterRace(b);

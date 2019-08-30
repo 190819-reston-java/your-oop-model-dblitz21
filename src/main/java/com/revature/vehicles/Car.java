@@ -1,6 +1,8 @@
 package com.revature.vehicles;
 
-public class Car extends Vehicle implements Comparable<Car> {
+import java.util.Comparator;
+
+public class Car extends Vehicle implements Comparable<Car>, Comparator<Car> {
 	static int trafficlevel = 0;
 	public Car() {
 		
@@ -27,7 +29,22 @@ public class Car extends Vehicle implements Comparable<Car> {
 	
 	public int compareTo(Car auto) {
 		
-		return this.getSpeed() - auto.getSpeed();
+		return this.getName().compareTo(auto.getName());
 	}
+
+	@Override
+	public int compare(Car auto1, Car auto2) {
+		// TODO Auto-generated method stub
+		int auto1speed = auto1.getSpeed();
+		int auto2speed = auto2.getSpeed();
+		
+		int out = auto1speed - auto2speed;
+		if (out == 0) {
+			auto1.compareTo(auto2);
+		}
+		return 0;
+	}
+	
+	
 
 }

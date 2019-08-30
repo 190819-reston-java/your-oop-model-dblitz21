@@ -16,7 +16,11 @@ public class DragRace {
 	}
 	
 	public void enterRace(Car auto) {
-		
+//		for (Car c: autoList) {
+//			if (auto.getName().contentEquals(c.getName())){
+//				throw new Exception
+//			}
+//		}
 		System.out.println(auto.getName() + " has entered the drag race!");
 		autoList.add(auto);
 	}
