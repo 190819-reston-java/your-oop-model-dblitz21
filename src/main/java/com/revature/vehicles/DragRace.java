@@ -30,6 +30,10 @@ public class DragRace {
 	}
 	
 	public void startRace(){
+		if ((autoList.size() == 0) || (autoList.size() == 1)) {
+			System.out.println("Waiting for entrants...");
+			return;
+		}
 		SortedSet<Car> sortedCarSet = new TreeSet<Car>(autoList);
 		
 		System.out.println("When the light turned green...");
@@ -39,8 +43,9 @@ public class DragRace {
 		}
 		
 		System.out.println("\nWhen the Smoke clears...");
-		System.out.println("The " + sortedCarSet.first().getName() + " wins and the " + sortedCarSet.last().getName() 
-				+ " is left trailing behind!!");
+		String result = "The " + sortedCarSet.first().getName() + " wins and the " + sortedCarSet.last().getName() 
+				+ " is left trailing behind!!";
+		System.out.println(result);
 	}
 
 }

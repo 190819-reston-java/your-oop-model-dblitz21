@@ -35,6 +35,7 @@ public class Driver {
 		//Drag race methods
 		System.out.println("\nA Drag Race is in Progress");
 		DragRace race = new DragRace();
+		race.startRace();
 		race.enterRace(ferari);
 		race.enterRace(chevy);
 		race.enterRace(cadillac);
