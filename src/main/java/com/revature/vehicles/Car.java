@@ -29,7 +29,7 @@ public class Car extends Vehicle implements Comparable<Car>, Comparator<Car> {
 	
 	public int compareTo(Car auto) {
 		
-		return this.getName().compareTo(auto.getName());
+		return -1 * (this.getSpeed() - auto.getSpeed());
 	}
 
 	@Override
@@ -38,11 +38,14 @@ public class Car extends Vehicle implements Comparable<Car>, Comparator<Car> {
 		int auto1speed = auto1.getSpeed();
 		int auto2speed = auto2.getSpeed();
 		
-		int out = auto1speed - auto2speed;
+		int out = 0; 
+				
+		out = auto1speed - auto2speed;
 		if (out == 0) {
-			auto1.compareTo(auto2);
+			return auto1.compareTo(auto2);
 		}
-		return 0;
+		
+		return out;
 	}
 	
 	

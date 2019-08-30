@@ -1,6 +1,7 @@
 package com.revature.vehicles;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -16,11 +17,7 @@ public class DragRace {
 	}
 	
 	public void enterRace(Car auto) {
-//		for (Car c: autoList) {
-//			if (auto.getName().contentEquals(c.getName())){
-//				throw new Exception
-//			}
-//		}
+
 		System.out.println(auto.getName() + " has entered the drag race!");
 		autoList.add(auto);
 	}
@@ -34,11 +31,16 @@ public class DragRace {
 	
 	public void startRace(){
 		SortedSet<Car> sortedCarSet = new TreeSet<Car>(autoList);
-		System.out.println("When the light turned green");
+		
+		System.out.println("When the light turned green...");
 		
 		for (Car a : sortedCarSet) {
-			System.out.println(a.getSpeed());
+			System.out.println("There's the " + a.getName() + " racing along at " + a.getSpeed() + "mph.");
 		}
+		
+		System.out.println("\nWhen the Smoke clears...");
+		System.out.println("The " + sortedCarSet.first().getName() + " wins and the " + sortedCarSet.last().getName() 
+				+ " is left trailing behind!!");
 	}
 
 }

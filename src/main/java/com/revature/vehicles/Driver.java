@@ -3,37 +3,43 @@ package com.revature.vehicles;
 public class Driver {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Car a = new Car("Ferari", "Red", 65);
-		Car b = new Car("Chevrolet");
-		Car cadillac = new Car("Cadillac", "Green", 120);
-		Motorcycle c = new Motorcycle("Chopper", "black", -5);
-		a.checkTires();
-		a.drive();
-		c.drive();
-		System.out.println(a.getColor());
-		c.jump();
-		c.checkTires();
-		a.checkTraffic();
-		Motorcycle d = new Motorcycle("Harley", "gray", 75);
-		Motorcycle e = new Motorcycle("Dirt Bike", "red", 95);
+		
+		Car ferari = new Car("Ferari", "Red", 95);
+		Car delorean = new Car("Delorean", "Silver", 88);
+		Car chevy = new Car("Chevrolet");
+		Car corolla = new Car("Corolla");
+		Car cadillac = new Car("Cadillac", "Green", 80);
+		
+		Motorcycle chopper = new Motorcycle("Chopper", "black", 85);
+		ferari.checkTires();
+		ferari.drive();
+		chevy.drive();
+		System.out.println(ferari.getColor());
+		chopper.jump();
+		chopper.checkTires();
+		ferari.checkTraffic();
+		Motorcycle harley = new Motorcycle("Harley", "gray", 75);
+		Motorcycle dirtbike = new Motorcycle("Dirt Bike", "red", 95);
 		
 		//collection methods
 		Gang ravens = new Gang();
-		ravens.addGangMember(c);
-		ravens.addGangMember(d);
-		ravens.addGangMember(e);
+		ravens.addGangMember(chopper);
+		ravens.addGangMember(harley);
+		ravens.addGangMember(dirtbike);
 		
 		ravens.ownTheHighway();
-		ravens.expelGangMember(d);
+		ravens.expelGangMember(dirtbike);
 		ravens.ownTheHighway();
+
 		
-//		DragRace race = new DragRace();
-//		race.enterRace(a);
-//		race.enterRace(b);
-//		race.enterRace(cadillac);
-//		
-//		race.startRace();
+		//Drag race methods
+		System.out.println("\nA Drag Race is in Progress");
+		DragRace race = new DragRace();
+		race.enterRace(ferari);
+		race.enterRace(chevy);
+		race.enterRace(cadillac);
+		
+		race.startRace();
 		
 		
 		
